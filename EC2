@@ -1,5 +1,9 @@
-MyInstance:
-  Type: AWS::EC2::Instance
-  Properties:
-    AvailabilityZone: us-east-1a
-    ImageId: ami-0915e09cc7ceee3ab
+Resources:  
+  WebInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0ff8a91507f77f867
+      KeyName: my-key
+      SecurityGroupIds:-sg-0bb8648ae484b6b1b
+      SubnetId: subnet-062889d5363855927
